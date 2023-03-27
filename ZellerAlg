@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main()
+{	
+	int gun,ay,yil,hesap,yuzyil;
+	printf("Gün : "); scanf("%d",&gun);
+	printf("Ay :");	scanf("%d",&ay);
+	printf("Yıl : "); scanf("%d",&yil);
+	
+	yuzyil = ((yil /10) / 10) +1 ;
+	
+	hesap = (gun + ((13 * ay -1) /  5) + yil + (yil / 4) + (yuzyil / 4) - 2 * yuzyil) % 7;
+	
+	switch(hesap)
+	{
+		case 0:
+			printf("Pazartesi");
+			break;
+		case 1:
+			printf("Sali");
+			break;
+		case 2:
+			printf("Carsamba");
+			break;
+		case 3:
+			printf("Persembe");
+			break;
+		case 4:
+			printf("Cuma");
+			break;
+		case 5:
+			printf("Cumartesi");
+			break;
+		case 6:
+			printf("Pazar");
+			break;
+			
+		default:
+			break;
+	}
+	
+	return 0;
+}
